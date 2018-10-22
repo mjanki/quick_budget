@@ -5,7 +5,8 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activity.MainActivity">
+        tools:context=".activity.MainActivity"
+        android:background="@color/colorBackground">
 
     <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -17,7 +18,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:title="Main Title" />
+            tools:title="Main Title"/>
 
     <fragment
             android:id="@+id/myNavHostFragment"

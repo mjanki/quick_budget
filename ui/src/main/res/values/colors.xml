@@ -10,4 +10,6 @@
 
     <color name="colorTextOnPrimary">#ffffff</color>
     <color name="colorTextOnSecondary">#ffffff</color>
+
+    <color name="colorBackground">#C8E6C9</color>
 </resources>
