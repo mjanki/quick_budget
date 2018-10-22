@@ -1,1 +1,1 @@
-include ':ui', ':model', ':util', ':database', ':network', ':repository', ':viewmodel'
+include ':ui', ':model', ':database', ':network', ':repository', ':viewmodel'
