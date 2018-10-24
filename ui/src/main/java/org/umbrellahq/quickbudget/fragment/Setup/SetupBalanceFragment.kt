@@ -1,12 +1,12 @@
 package org.umbrellahq.quickbudget.fragment.Setup
 
-
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_setup_balance.*
 import org.umbrellahq.quickbudget.R
+import org.umbrellahq.quickbudget.adapter_viewpager.SetupViewPagerAdapter
 import org.umbrellahq.util.component.NonSwipeableViewPager
 import org.umbrellahq.util.foundation.FoundationFragment
 import org.umbrellahq.util.hideKeyboard
@@ -21,17 +21,15 @@ class SetupBalanceFragment : FoundationFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         bNext.setOnClickListener {
-            goNext()
+            pushSetupIncome()
         }
     }
 
-    private fun goNext() {
+    private fun pushSetupIncome() {
         val viewPager = activity?.findViewById<NonSwipeableViewPager>(R.id.vpSetup)
         if (viewPager != null) {
-            if (viewPager.currentItem < 2) {
-                viewPager.currentItem = viewPager.currentItem + 1
-                hideKeyboard()
-            }
+            viewPager.currentItem = SetupViewPagerAdapter.TAB_POSITION_SETUP_INCOME
+            hideKeyboard()
         }
     }
 }
