@@ -22,6 +22,7 @@ class SetupBalanceFragment : FoundationFragment() {
 
         bNext.setOnClickListener {
             pushSetupIncome()
+            hideKeyboard()
         }
     }
 
@@ -29,7 +30,6 @@ class SetupBalanceFragment : FoundationFragment() {
         val viewPager = activity?.findViewById<NonSwipeableViewPager>(R.id.vpSetup)
         if (viewPager != null) {
             viewPager.currentItem = SetupViewPagerAdapter.TAB_POSITION_SETUP_INCOME
-            hideKeyboard()
         }
     }
 }
