@@ -9,15 +9,14 @@ import androidx.viewpager.widget.ViewPager
 import kotlinx.android.synthetic.main.fragment_setup.*
 import org.umbrellahq.quickbudget.R
 import org.umbrellahq.quickbudget.adapter_viewpager.SetupViewPagerAdapter
-import org.umbrellahq.quickbudget.fragment.FoundationFragment
-import org.umbrellahq.quickbudget.fragment.setupToolbar
+import org.umbrellahq.util.foundation.FoundationFragment
+import org.umbrellahq.util.foundation.setupToolbar
+import org.umbrellahq.util.inflate
 
 class SetupFragment : FoundationFragment() {
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_setup, container, false)
-    }
+    // Inflate Layout for fragment
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? = container?.inflate(R.layout.fragment_setup)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -36,20 +35,14 @@ class SetupFragment : FoundationFragment() {
 
             override fun onPageScrollStateChanged(state: Int) { }
         })
-
-        bNext.setOnClickListener {
-            if (vpSetup.currentItem < 2) {
-                vpSetup.currentItem = vpSetup.currentItem + 1
-            }
-        }
-
-        bPrevious.setOnClickListener {
-            if (vpSetup.currentItem > 0) {
-                vpSetup.currentItem = vpSetup.currentItem - 1
-            }
-        }
     }
 
     // Don't pop on system back
-    override fun doBack() = true
+    override fun doBack(): Boolean {
+        if (vpSetup.currentItem > 0) {
+            vpSetup.currentItem--
+        }
+
+        return true
+    }
 }

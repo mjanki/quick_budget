@@ -1,4 +1,4 @@
-package org.umbrellahq.quickbudget.fragment
+package org.umbrellahq.util.foundation
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment

@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import kotlinx.android.synthetic.main.activity_main.*
 import org.umbrellahq.quickbudget.R
-import org.umbrellahq.quickbudget.fragment.FoundationFragment
+import org.umbrellahq.util.foundation.FoundationFragment
 
 class MainActivity : AppCompatActivity() {
 

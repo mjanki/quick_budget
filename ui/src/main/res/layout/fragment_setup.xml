@@ -7,23 +7,11 @@
                                                    tools:context=".fragment.Setup.SetupFragment"
                                                    android:id="@+id/constraintLayout">
 
-    <com.google.android.material.button.MaterialButton
-            android:text="Next"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/bNext" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"/>
-    <org.umbrellahq.quickbudget.components.NonSwipeableViewPager
+    <org.umbrellahq.util.component.NonSwipeableViewPager
             android:layout_width="0dp"
             android:layout_height="0dp" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/bNext" android:id="@+id/vpSetup"/>
-    <com.google.android.material.button.MaterialButton
-            android:text="Previous"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/bPrevious" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/bNext"/>
+            android:id="@+id/vpSetup"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

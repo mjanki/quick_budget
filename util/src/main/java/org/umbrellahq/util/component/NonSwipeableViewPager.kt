@@ -1,4 +1,4 @@
-package org.umbrellahq.quickbudget.components
+package org.umbrellahq.util.component
 
 import android.content.Context
 import android.util.AttributeSet
