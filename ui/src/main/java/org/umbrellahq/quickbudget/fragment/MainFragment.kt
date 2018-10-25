@@ -15,7 +15,9 @@ import org.umbrellahq.util.inflate
 class MainFragment : FoundationFragment() {
 
     // Inflate Layout for fragment
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? = container?.inflate(R.layout.fragment_main)
+    override fun onCreateView(inflater: LayoutInflater,
+                              container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? = container?.inflate(R.layout.fragment_main)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
