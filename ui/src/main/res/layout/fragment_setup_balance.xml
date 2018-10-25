@@ -1,60 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/rootView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:focusable="true" android:focusableInTouchMode="true">
 
-    <com.blackcat.currencyedittext.CurrencyEditText
-            android:layout_width="0dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/etBalance"
-            android:singleLine="true"
-            android:backgroundTint="@color/colorSecondary"
-            android:textColorHint="@color/colorHintOnLight"
-            android:textAppearance="@android:style/TextAppearance.Material.Headline"
-            android:textAlignment="center"
-            android:textColor="@color/colorTextOnLightHigh"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:textSize="24sp"
-            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/bNext"/>
-    <Button
-            android:text="@string/proceed"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/bNext"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/etBalance" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.5"
-            android:textSize="24sp"/>
-    <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            app:srcCompat="@drawable/ic_account_balance"
-            android:id="@+id/imageView" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:tint="@color/colorSecondary" app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintBottom_toTopOf="@+id/textView2"
-            app:layout_constraintVertical_chainStyle="packed"
-            android:contentDescription="@string/content_desc_img_account"/>
-    <TextView
-            android:text="@string/account_balance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView2"
-            android:layout_marginTop="4dp"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            android:textAlignment="center" android:textSize="24sp" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintBottom_toTopOf="@+id/etBalance" android:textColor="@color/colorTextOnLightHigh"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:focusable="true" android:focusableInTouchMode="true">
+
+        <com.blackcat.currencyedittext.CurrencyEditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/etBalance"
+                android:singleLine="true"
+                android:backgroundTint="@color/colorSecondary"
+                android:textColorHint="@color/colorHintOnLight"
+                android:textAppearance="@android:style/TextAppearance.Material.Headline"
+                android:textAlignment="center"
+                android:textColor="@color/colorTextOnLightHigh"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent" android:textSize="24sp"
+                app:layout_constraintHorizontal_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/bNext"/>
+        <Button
+                android:text="@string/proceed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/bNext"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/etBalance" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp" android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.5"
+                android:textSize="24sp"/>
+        <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                app:srcCompat="@drawable/ic_account_balance"
+                android:id="@+id/imageView" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:tint="@color/colorSecondary" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintBottom_toTopOf="@+id/textView2"
+                app:layout_constraintVertical_chainStyle="packed"
+                android:contentDescription="@string/content_desc_img_account" app:layout_constraintVertical_bias="0.0"
+                android:layout_marginEnd="16dp"/>
+        <TextView
+                android:text="@string/account_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                android:textAlignment="center" android:textSize="24sp" android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintBottom_toTopOf="@+id/etBalance" android:textColor="@color/colorTextOnLightHigh"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
