@@ -14,11 +14,14 @@ import org.umbrellahq.util.component.NonSwipeableViewPager
 import org.umbrellahq.util.foundation.FoundationFragment
 import org.umbrellahq.util.hideKeyboard
 import org.umbrellahq.util.inflate
+import org.umbrellahq.util.pop
 
 class SetupIncomeFragment : FoundationFragment() {
 
     // Inflate Layout for fragment
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? = container?.inflate(R.layout.fragment_setup_income)
+    override fun onCreateView(inflater: LayoutInflater,
+                              container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? = container?.inflate(R.layout.fragment_setup_income)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -46,10 +49,9 @@ class SetupIncomeFragment : FoundationFragment() {
     }
 
     private fun popToSetupBalance() {
-        val viewPager = activity?.findViewById<NonSwipeableViewPager>(R.id.vpSetup)
-        if (viewPager != null) {
-            viewPager.currentItem = SetupViewPagerAdapter.TAB_POSITION_SETUP_BALANCE
-        }
+        activity?.findViewById<NonSwipeableViewPager>(R.id.vpSetup)?.pop(
+            fromIdx = SetupViewPagerAdapter.TAB_POSITION_SETUP_INCOME
+        )
     }
 
     companion object {

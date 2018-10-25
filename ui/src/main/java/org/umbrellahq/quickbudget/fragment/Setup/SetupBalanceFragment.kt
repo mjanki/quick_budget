@@ -1,5 +1,6 @@
 package org.umbrellahq.quickbudget.fragment.Setup
 
+
 import android.os.Bundle
 import android.os.Handler
 import android.view.LayoutInflater
@@ -12,11 +13,14 @@ import org.umbrellahq.util.component.NonSwipeableViewPager
 import org.umbrellahq.util.foundation.FoundationFragment
 import org.umbrellahq.util.hideKeyboard
 import org.umbrellahq.util.inflate
+import org.umbrellahq.util.push
 
 class SetupBalanceFragment : FoundationFragment() {
 
     // Inflate Layout for fragment
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? = container?.inflate(R.layout.fragment_setup_balance)
+    override fun onCreateView(inflater: LayoutInflater,
+                              container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? = container?.inflate(R.layout.fragment_setup_balance)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -28,9 +32,8 @@ class SetupBalanceFragment : FoundationFragment() {
     }
 
     private fun pushSetupIncome() {
-        val viewPager = activity?.findViewById<NonSwipeableViewPager>(R.id.vpSetup)
-        if (viewPager != null) {
-            viewPager.currentItem = SetupViewPagerAdapter.TAB_POSITION_SETUP_INCOME
-        }
+        activity?.findViewById<NonSwipeableViewPager>(R.id.vpSetup)?.push(
+            fromIdx = SetupViewPagerAdapter.TAB_POSITION_SETUP_BALANCE
+        )
     }
 }
