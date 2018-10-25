@@ -7,7 +7,7 @@
     <color name="colorSecondaryDark">#4c0005</color>
     <color name="colorSecondaryLight">#b05b57</color>
 
-    <color name="colorError">#FF0000</color>
+    <color name="colorError">#ff0000</color>
 
     <color name="colorTextOnPrimaryHigh">#DEFFFFFF</color>
     <color name="colorTextOnPrimaryMedium">#99FFFFFF</color>

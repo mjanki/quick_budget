@@ -1,6 +1,7 @@
 package org.umbrellahq.quickbudget.fragment.Setup
 
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,8 +22,8 @@ class SetupBalanceFragment : FoundationFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         bNext.setOnClickListener {
-            pushSetupIncome()
             hideKeyboard()
+            Handler().postDelayed({ pushSetupIncome() }, 100)
         }
     }
 

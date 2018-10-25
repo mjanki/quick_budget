@@ -9,6 +9,18 @@
     <!-- Setup Text -->
     <string name="account_balance">Account Balance</string>
 
+    <!-- Setup Income -->
+    <string name="setup_income_income">Income</string>
+    <string name="setup_income_every">every</string>
+    <string name="setup_income_number_of">number of</string>
+    <string name="setup_income_default_period">1</string>
+    <string-array name="setup_income_periods">
+        <item>day(s)</item>
+        <item>week(s)</item>
+        <item>month(s)</item>
+        <item>year(s)</item>
+    </string-array>
+
     <!-- Generic -->
     <string name="save">Save</string>
     <string name="next">Next</string>
@@ -17,4 +29,5 @@
 
     <!-- Content Description -->
     <string name="content_desc_img_account">Account Image</string>
+    <string name="content_desc_img_income">Income</string>
 </resources>
