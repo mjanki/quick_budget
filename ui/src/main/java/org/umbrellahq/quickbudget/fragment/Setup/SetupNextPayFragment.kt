@@ -15,7 +15,6 @@ import org.umbrellahq.util.inflate
 import org.umbrellahq.util.pop
 import java.util.*
 
-
 class SetupNextPayFragment : FoundationFragment() {
     private val calendar = Calendar.getInstance()
     private var year = calendar.get(Calendar.YEAR)

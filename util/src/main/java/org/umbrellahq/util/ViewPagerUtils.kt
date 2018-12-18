@@ -1,13 +1,13 @@
 package org.umbrellahq.util
 
 import android.os.Handler
-import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
+import org.umbrellahq.util.foundation.FoundationActivity
 
 fun ViewPager.pop(fromIdx: Int = currentItem, hideKeyboard: Boolean = true) {
     if (hideKeyboard) {
         val ctx = context
-        if (ctx is AppCompatActivity) {
+        if (ctx is FoundationActivity) {
             ctx.hideKeyboard()
             Handler().postDelayed({
                 move(fromIdx - 1)
@@ -19,7 +19,7 @@ fun ViewPager.pop(fromIdx: Int = currentItem, hideKeyboard: Boolean = true) {
 fun ViewPager.push(fromIdx: Int = currentItem, hideKeyboard: Boolean = true) {
     if (hideKeyboard) {
         val ctx = context
-        if (ctx is AppCompatActivity) {
+        if (ctx is FoundationActivity) {
             ctx.hideKeyboard()
             Handler().postDelayed({
                 move(fromIdx + 1)

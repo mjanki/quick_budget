@@ -3,11 +3,10 @@ package org.umbrellahq.util
 import android.app.Activity
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import org.umbrellahq.util.foundation.FoundationActivity
 
-
-fun AppCompatActivity.hideKeyboard() {
+fun FoundationActivity.hideKeyboard() {
     val imm = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
 
     //Find the currently focused view, so we can grab the correct window token from it.
@@ -23,5 +22,5 @@ fun AppCompatActivity.hideKeyboard() {
 }
 
 fun Fragment.hideKeyboard() {
-    (activity as? AppCompatActivity)?.hideKeyboard()
+    (activity as? FoundationActivity)?.hideKeyboard()
 }

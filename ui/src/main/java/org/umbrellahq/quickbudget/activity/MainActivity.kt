@@ -1,21 +1,21 @@
 package org.umbrellahq.quickbudget.activity
 
-
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import kotlinx.android.synthetic.main.activity_main.*
 import org.umbrellahq.quickbudget.R
+import org.umbrellahq.util.foundation.FoundationActivity
 import org.umbrellahq.util.foundation.FoundationFragment
 
-class MainActivity : AppCompatActivity() {
-
+class MainActivity : FoundationActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         setSupportActionBar(toolbar)
+
+        cTvTitle = tvTitle
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {

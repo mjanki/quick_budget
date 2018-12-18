@@ -1,6 +1,5 @@
 package org.umbrellahq.quickbudget.fragment.Setup
 
-
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
