@@ -32,8 +32,6 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
 
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation "androidx.test:runner:$test_version"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
 
     implementation project(':repository')
     implementation project(':model')

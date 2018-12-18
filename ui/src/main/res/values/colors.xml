@@ -22,4 +22,6 @@
     <color name="colorHintOnLight">@color/colorTextOnLightDisabled</color>
 
     <color name="colorBackground">#E8F5E9</color>
+
+    <color name="transparent">#00FFFFFF</color>
 </resources>

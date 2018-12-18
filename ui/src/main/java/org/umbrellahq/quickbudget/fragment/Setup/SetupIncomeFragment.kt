@@ -2,7 +2,6 @@ package org.umbrellahq.quickbudget.fragment.Setup
 
 
 import android.os.Bundle
-import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,26 +11,26 @@ import org.umbrellahq.quickbudget.R
 import org.umbrellahq.quickbudget.adapter_viewpager.SetupViewPagerAdapter
 import org.umbrellahq.util.component.NonSwipeableViewPager
 import org.umbrellahq.util.foundation.FoundationFragment
-import org.umbrellahq.util.hideKeyboard
 import org.umbrellahq.util.inflate
 import org.umbrellahq.util.pop
+import org.umbrellahq.util.push
 
 class SetupIncomeFragment : FoundationFragment() {
 
     // Inflate Layout for fragment
-    override fun onCreateView(inflater: LayoutInflater,
-                              container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? = container?.inflate(R.layout.fragment_setup_income)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? = container?.inflate(R.layout.fragment_setup_income)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         initializeIncomePeriodSpinner()
 
-        bBack.setOnClickListener {
-            hideKeyboard()
-            Handler().postDelayed({ popToSetupBalance() }, 100)
-        }
+        bBack.setOnClickListener { popToSetupBalance() }
+        bNext.setOnClickListener { pushSetupNextPay() }
     }
 
     private fun initializeIncomePeriodSpinner() {
@@ -46,6 +45,12 @@ class SetupIncomeFragment : FoundationFragment() {
             spinnerPeriod.adapter = adapter
             spinnerPeriod.setSelection(ITEM_MONTHS_POSITION)
         }
+    }
+
+    private fun pushSetupNextPay() {
+        activity?.findViewById<NonSwipeableViewPager>(R.id.vpSetup)?.push(
+            fromIdx = SetupViewPagerAdapter.TAB_POSITION_SETUP_INCOME
+        )
     }
 
     private fun popToSetupBalance() {

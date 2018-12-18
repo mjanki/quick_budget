@@ -17,7 +17,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:title="Main Title"/>
+            tools:title="Main Title">
+
+
+    </androidx.appcompat.widget.Toolbar>
 
     <fragment
             android:id="@+id/myNavHostFragment"

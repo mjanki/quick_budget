@@ -12,13 +12,17 @@ android {
         targetSdkVersion project.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
@@ -34,11 +38,12 @@ dependencies {
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation "androidx.test:runner:$test_version"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+    androidTestImplementation "androidx.test:rules:1.1.1"
+    androidTestImplementation "androidx.test.ext:junit:1.1.0"
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.1.1"
 
-    implementation "android.arch.navigation:navigation-fragment-ktx:1.0.0-alpha06" // use -ktx for Kotlin
-    implementation "android.arch.navigation:navigation-ui-ktx:1.0.0-alpha06" // use -ktx for Kotlin
+    implementation "android.arch.navigation:navigation-fragment-ktx:1.0.0-alpha08" // use -ktx for Kotlin
+    implementation "android.arch.navigation:navigation-ui-ktx:1.0.0-alpha08" // use -ktx for Kotlin
 
     implementation "com.github.BlacKCaT27:CurrencyEditText:2.0.2"
 

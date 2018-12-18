@@ -54,8 +54,6 @@ dependencies {
     implementation "com.jakewharton.threetenabp:threetenabp:1.1.0"
 
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation "androidx.test:runner:$test_version"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation project(':model')

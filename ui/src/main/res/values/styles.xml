@@ -8,5 +8,11 @@
         <item name="colorSecondary">@color/colorSecondary</item>
         <item name="colorError">@color/colorError</item>
         <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="android:datePickerDialogTheme">@style/DatePickerStyle</item>
+    </style>
+
+    <style name="DatePickerStyle" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="colorAccent">@color/colorSecondary</item>
+        <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button.TextButton</item>
     </style>
 </resources>

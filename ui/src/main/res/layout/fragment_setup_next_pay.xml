@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true" android:focusableInTouchMode="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Button
+                android:text="@string/back"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/bBack"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                android:textSize="18sp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/bDate" android:layout_marginTop="24dp"/>
+        <Button
+                android:id="@+id/bSave"
+                android:text="@string/save"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/bBack" android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp" app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintTop_toTopOf="@+id/bBack" app:layout_constraintBottom_toBottomOf="@+id/bBack"/>
+        <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp" app:srcCompat="@drawable/ic_account_next_pay"
+                android:id="@+id/imageView2"
+                android:tint="@color/colorSecondary" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                app:layout_constraintHorizontal_bias="0.5"
+                android:contentDescription="@string/content_desc_img_income"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@+id/tvIncome"
+                app:layout_constraintVertical_chainStyle="packed" app:layout_constraintVertical_bias="0.0"
+                android:layout_marginTop="16dp"/>
+        <TextView
+                android:id="@+id/tvIncome"
+                android:text="@string/setup_next_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTextOnLightHigh" android:textSize="24sp"
+                android:layout_marginEnd="16dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2"
+                app:layout_constraintBottom_toTopOf="@+id/bDate" android:layout_marginTop="4dp"/>
+        <Button
+                android:id="@+id/bDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginEnd="16dp" app:layout_constraintEnd_toEndOf="parent" android:textAlignment="center"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintTop_toBottomOf="@+id/tvIncome"
+                app:layout_constraintBottom_toTopOf="@+id/bBack" android:layout_marginTop="24dp"
+                tools:text="5/15/2018" android:textSize="18sp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

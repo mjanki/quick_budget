@@ -16,9 +16,11 @@ import org.umbrellahq.util.pop
 class SetupFragment : FoundationFragment() {
 
     // Inflate Layout for fragment
-    override fun onCreateView(inflater: LayoutInflater,
-                              container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? = container?.inflate(R.layout.fragment_setup)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? = container?.inflate(R.layout.fragment_setup)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -30,7 +32,8 @@ class SetupFragment : FoundationFragment() {
 
     // Don't pop on system back
     override fun doBack(): Boolean {
-        vpSetup.pop()
+        // Can't do system back if keyboard is present
+        vpSetup.pop(hideKeyboard = false)
 
         return true
     }

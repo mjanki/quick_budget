@@ -6,7 +6,7 @@
 
     <fragment android:id="@+id/setupFragment" android:name="org.umbrellahq.quickbudget.fragment.Setup.SetupFragment"
               android:label="fragment_setup" tools:layout="@layout/fragment_setup">
-        <action android:id="@+id/toMain" app:destination="@id/mainFragment"/>
+        <action android:id="@+id/toMain" app:popUpTo="@id/mainFragment"/>
     </fragment>
     <fragment android:id="@+id/mainFragment" android:name="org.umbrellahq.quickbudget.fragment.MainFragment"
               android:label="fragment_main" tools:layout="@layout/fragment_main">

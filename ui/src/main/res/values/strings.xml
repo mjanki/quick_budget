@@ -21,11 +21,15 @@
         <item>year(s)</item>
     </string-array>
 
+    <!-- Setup Next Pay -->
+    <string name="setup_next_pay">Date of Next Payday</string>
+
     <!-- Generic -->
     <string name="save">Save</string>
     <string name="next">Next</string>
     <string name="proceed">Proceed</string>
     <string name="back">Back</string>
+    <string name="date_format">%1$d/%2$d/%3$d</string>
 
     <!-- Content Description -->
     <string name="content_desc_img_account">Account Image</string>
