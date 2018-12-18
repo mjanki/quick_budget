@@ -1,12 +1,10 @@
 package org.umbrellahq.quickbudget.fragment.Setup
 
 import android.app.DatePickerDialog
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.DatePicker
 import androidx.navigation.findNavController
 import kotlinx.android.synthetic.main.fragment_setup_next_pay.*
 import org.umbrellahq.quickbudget.R
@@ -44,7 +42,7 @@ class SetupNextPayFragment : FoundationFragment() {
     private fun showDatePicker() {
         val ctx = context ?: return
 
-        val datePicker = DatePickerDialog(
+        val datePickerDialog = DatePickerDialog(
             ctx,
             DatePickerDialog.OnDateSetListener { _, year, month, day ->
                 this.day = day
@@ -56,7 +54,8 @@ class SetupNextPayFragment : FoundationFragment() {
             year, month, day
         )
 
-        datePicker.show()
+        datePickerDialog.datePicker.minDate = System.currentTimeMillis() - 1000
+        datePickerDialog.show()
     }
 
     private fun popToSetupIncome() {
