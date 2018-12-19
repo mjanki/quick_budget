@@ -3,8 +3,8 @@ package org.umbrellahq.util
 import android.app.Activity
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import androidx.fragment.app.Fragment
 import org.umbrellahq.util.foundation.FoundationActivity
+import org.umbrellahq.util.foundation.FoundationFragment
 
 fun FoundationActivity.hideKeyboard() {
     val imm = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
@@ -21,6 +21,6 @@ fun FoundationActivity.hideKeyboard() {
     view.clearFocus()
 }
 
-fun Fragment.hideKeyboard() {
+fun FoundationFragment.hideKeyboard() {
     (activity as? FoundationActivity)?.hideKeyboard()
 }
