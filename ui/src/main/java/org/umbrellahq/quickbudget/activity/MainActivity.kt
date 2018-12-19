@@ -14,8 +14,7 @@ class MainActivity : FoundationActivity() {
         setContentView(R.layout.activity_main)
 
         setSupportActionBar(toolbar)
-
-        cTvTitle = tvTitle
+        setupCenterTitle(tvTitle)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {

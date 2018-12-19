@@ -7,7 +7,6 @@ open class FoundationFragment : Fragment() {
 }
 
 fun Fragment.setupToolbar(title: String, showBack: Boolean = true) {
-    activity?.title = ""
-    (activity as FoundationActivity).cTvTitle.text = title
+    (activity as FoundationActivity).setTitle(title)
     (activity as FoundationActivity).supportActionBar?.setDisplayHomeAsUpEnabled(showBack)
 }
