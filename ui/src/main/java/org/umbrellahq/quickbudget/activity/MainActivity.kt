@@ -12,8 +12,9 @@ class MainActivity : FoundationActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        setSupportActionBar(toolbar)
         setupNavigationHostFragment(R.id.myNavHostFragment)
+        setSupportActionBar(toolbar)
+        setupRootView(clRootView)
         setupCenterTitle(tvTitle)
     }
 

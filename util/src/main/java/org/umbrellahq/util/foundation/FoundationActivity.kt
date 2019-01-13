@@ -1,6 +1,7 @@
 package org.umbrellahq.util.foundation
 
 import android.util.Log
+import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment
 open class FoundationActivity : AppCompatActivity() {
     private var tvTitle: TextView? = null
     private var navHostFragment: Fragment? = null
+    var rootView: View? = null
 
 
     /* ----- Navigation Methods ----- */
@@ -20,6 +22,10 @@ open class FoundationActivity : AppCompatActivity() {
         }
     }
 
+    /* ----- View methods ----- */
+    protected fun setupRootView(rootView: View?) {
+        this.rootView = rootView
+    }
 
     /* ----- Title methods ----- */
 
