@@ -1,11 +1,8 @@
 package org.umbrellahq.quickbudget.fragment
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.navigation.findNavController
-import kotlinx.android.synthetic.main.fragment_main.*
+import android.view.*
+import androidx.navigation.fragment.findNavController
 import org.umbrellahq.quickbudget.R
 import org.umbrellahq.util.foundation.FoundationFragment
 import org.umbrellahq.util.foundation.setupToolbar
@@ -22,7 +19,20 @@ class MainFragment : FoundationFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setupToolbar(getString(R.string.main_fragment), false)
+        setHasOptionsMenu(true)
+    }
 
-        bSetupFragment.setOnClickListener { it.findNavController().navigate(R.id.toSetup) }
+    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+        inflater?.inflate(R.menu.menu_fragment_main, menu)
+
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item?.itemId) {
+            R.id.action_add -> findNavController().navigate(R.id.toSetup)
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 }
