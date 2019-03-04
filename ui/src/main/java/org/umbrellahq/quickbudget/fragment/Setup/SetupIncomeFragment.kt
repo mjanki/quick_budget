@@ -43,7 +43,7 @@ class SetupIncomeFragment : FoundationFragment() {
         ).also { adapter ->
             // Apply the adapter to the spinner
             spinnerPeriod.adapter = adapter
-            spinnerPeriod.setSelection(ITEM_MONTHS_POSITION)
+            spinnerPeriod.setSelection(ITEM_WEEKS_POSITION)
         }
     }
 

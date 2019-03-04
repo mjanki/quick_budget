@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextView
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/colorTextOnLightHigh"
         android:paddingBottom="8dp"
         android:paddingTop="8dp"
         android:paddingEnd="16dp"
         android:paddingStart="16dp"
-        tools:text="month(s)" android:textSize="24sp" android:id="@+id/tvPeriodItem"/>
+        android:textSize="24sp"
+        android:id="@+id/tvPeriodItem"
+        tools:text="month(s)" />
